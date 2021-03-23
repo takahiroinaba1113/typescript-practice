@@ -16,6 +16,7 @@ This repo is a note for learning typescript
 
 Example:
 
+In JavaScript
 ```JavaScript
   const user = {
     id: 11111,
@@ -25,6 +26,7 @@ Example:
   user.height; // returns undefined in runtime
 ```
 
+In TypeScript
 ```TypeScript
   const user = {
     id: 11111,
