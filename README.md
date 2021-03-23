@@ -13,3 +13,24 @@ This repo is a note for learning typescript
 ## What Problems Can TypeScript Solve?
 - provide instant feedback (gives you an error) on your code during development (not like JS only seen during runtime!)
 - detect errors quickly and avoid unintentional bugs during runtime
+
+Example:
+
+```JavaScript
+  const user = {
+    id: 11111,
+    name: 'user1',
+    age: 20,
+  }
+  user.height; // returns undefined in runtime
+```
+
+```TypeScript
+  const user = {
+    id: 11111,
+    name: 'user1',
+    age: 20,
+  }
+  user.height; 
+  // TS tells you instantly that 'Property 'height' does not exist on type '{ id: number; name: string; age: number}'.
+```
