@@ -13,6 +13,7 @@ This repo is a note for learning typescript
 ## What Problems Can TypeScript Solve?
 - provide instant feedback (gives you an error) on your code during development (not like JS only seen during runtime!)
 - detect errors quickly and avoid unintentional bugs during runtime
+- not only catching bugs, but also suggesting properties you might want to use
 
 Example:
 
