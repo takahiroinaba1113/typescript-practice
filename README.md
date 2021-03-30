@@ -151,7 +151,7 @@ printValues({ x: 1, y: 2 })
 Interfaces
 ```TypeScript
 // an interface declaration is another way to name an object type
-interface Values = {
+interface Values {
   x: number
   y: number
 }
