@@ -53,9 +53,11 @@ In TypeScript
 Primitives
 ```TypeScript
 // primitives: add ':' and 'type'
+
 let firstName: string = "Taka"
 var isTyped: boolean = true
 const evenNumber: number = 2
+
 // you can, of course, specify no type (TS automatically infers the type)
 let lastName = "Inaba"
 var isNotTyped = true
@@ -65,9 +67,13 @@ const oddNumber = 3
 Arrays
 ```TypeScript
 const numArray: number[] = [1, 2, 3, 4, 5]
+```
 
-// Any: you can use whenever you dont want a particular value to cause typechecking errors
+Any
+```TypeScript
+// you can use whenever you dont want a particular value to cause typechecking errors
 let typeAny: any = { val: 0 }
+
 // they are all allowed
 typeAny.wow()
 typeAny()
@@ -79,13 +85,14 @@ Functions
 ```TypeScript
 // parameter type annotation:
 // add type annotations after each parameter to declare what types of rapameters the function accepts
+
 function greet(name: string) {
   console.log(`Hi ${name}`);
 }
 
 // typechecking runs and this returns an error
 greet(10);
-// Argument of type 'number' is not assignable to parameter of type 'string
+// -> Argument of type 'number' is not assignable to parameter of type 'string
 
 
 // return type annotation:
