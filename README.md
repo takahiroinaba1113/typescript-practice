@@ -178,7 +178,7 @@ So how type aliases and interfaces are different??
 - there are some differences...work on them later
 
 
-### Object Types (digging into deeper)
+### Object Types (a bit more)
 
 The fundamental way of grouping and passing data is through objects. Here is how they are typed and used in TypeScript.
 
