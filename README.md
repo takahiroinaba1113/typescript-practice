@@ -177,6 +177,7 @@ So how type aliases and interfaces are different??
   - interface is always extendable
 - there are some differences...work on them later
 
+
 ### Object Types (digging into deeper)
 
 The fundamental way of grouping and passing data is through objects. Here is how they are typed and used in TypeScript.
