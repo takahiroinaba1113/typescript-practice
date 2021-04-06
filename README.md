@@ -170,5 +170,76 @@ So how type aliases and interfaces are different??
   - interface is always extendable
 - there are some differences...work on them later
 
+### Object Types (digging into deeper)
+
+The fundamental way of grouping and passing data is through objects. Here is how they are typed and used in TypeScript.
+
+```TypeScript
+// type arguments directly in ()
+function greet(person: {name: string, age: number}) {
+  return `Hello ${person.name}`
+}
+```
+Or
+```TypeScript
+//  define interface first, and type argument with it
+interface Person {
+  name: string;
+  age: number;
+}
+
+// or type
+// type Person {
+//   name: string;
+//   age: number;
+// }
+
+function greet(person: Person) {
+  return `Hello ${person.name}`
+}
+```
+As the number of properties get bigger, having a defined interface will help you keep your source code cleaner.
+
+#### Property Modifiers
+A few things can be specified in each property: the type, optional or not, and can be wrriten or not.
+
+Optional Properties
+```TypeScript
+// by adding ? at the end of property name, you can make it optional
+interface orderInfo {
+  cartItem?: object[]
+  totalPrice?: object
+  id?: string
+}
+```
+This example means the followings:
+- orderInfo can have none of them, some of them, or all of them (they are all optional).
+- if properties exist, they have to match the given type
+- if properties dont exit, they are undefined (TS will tell you that they are potentially undefined!)
+
+What does it look like to have an interface of which some properties have more properteis as thier type?
+```TypeScript
+// interface whose property has another interface as its type
+interface orderInfo {
+  cartItem?: CartItem[]
+  totalPrice?: TotalPrice
+  id?: string
+}
+
+// now we have more interfaces
+interface CartItem {
+  productName: string
+  quantity: string
+  productId: string
+}
+
+interface TotalPrice {
+  oneTimePrice: string
+  installmentPrice: string
+}
+
+```
 
 https://www.typescriptlang.org/docs/handbook/2/everyday-types.html
+
+https://qiita.com/k-penguin-sato/items/e2791d7a57e96f6144e5
